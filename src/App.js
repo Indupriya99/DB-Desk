@@ -11,6 +11,8 @@ import FourthFloor from './Pages/FourthFloor/FourthFloor';
 import FifthFloor from './Pages/FifthFloor/FifthFloor';
 
 import Login from './components/Login/Login';
+import AdminLogin from './Pages/Admin/Login/AdminLogin';
+
 
 function App() {
 
@@ -31,7 +33,8 @@ function App() {
       {/* <Login/> */}
     </div>
   ):(
-    <Login setLogin={setLogin}/>
+    // <Login setLogin={setLogin}/>
+    <AdminLogin/>
   );
 }
 
