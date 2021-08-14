@@ -1,12 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
+import Utils from '../../components/Utils/Utils';
 
 import getWordFromNumber from '../../helpers/NumberToWord';
 import MapColorToTeam from '../../helpers/TeamToColors';
 
+import 'aos/dist/aos.css';
 import './firstfloor.css';
 
+import AOS from 'aos';
+
 const FirstFloor = () => {
+
+    useEffect(()=>{
+        AOS.init({
+            duration:2000
+        })
+    })
 
     const [myseat, setSelectedSeat] = useState('');
     const [previousSeatID,setPreviousSeatID] = useState('');
@@ -44,9 +54,10 @@ const FirstFloor = () => {
     return (
         <div className='first'>
             <Navbar />
+            <Utils seat={myseat} />
             <div>
                 <div className='seat-container'>
-                    <div className='left-side'>
+                    <div data-aos={'fade-right'} className='left-side'>
                         <div className='seat team2' id='f01s01' onClick={handleSeatClick}>F1S1</div>
                         <div className='seat' id='f01s02' onClick={handleSeatClick}>F1S2</div>
                         <div className='seat team2' id='f01s03' onClick={handleSeatClick}>F1S3</div>
@@ -58,7 +69,7 @@ const FirstFloor = () => {
                         <div className='seat' id='f01s09' onClick={handleSeatClick}>F1S9</div>
                         <div className='seat team2' id='f01s10' onClick={handleSeatClick}>F1S10</div>
                     </div>
-                    <div className='right-side'>
+                    <div data-aos={'fade-left'} className='right-side'>
                         <div className='seat team1' id='f01s11' onClick={handleSeatClick}>F1S11</div>
                         <div className='seat' id='f01s12' onClick={handleSeatClick}>F1S12</div>
                         <div className='seat  team1' id='f01s13' onClick={handleSeatClick}>F1S13</div>
