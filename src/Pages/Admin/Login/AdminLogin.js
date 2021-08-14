@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import './adminLogin.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default class AdminLogin extends Component {

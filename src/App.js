@@ -31,11 +31,11 @@ function App() {
         <div><FifthFloor/></div>
       </AwesomeSlider>
       {/* <Login/> */}
-      <Router>
+      {/* <Router>
         <Switch>
           <Route path='/adminLogin' exact component={AdminLogin} />
         </Switch>
-      </Router>
+      </Router> */}
     </div>
   ):(
     <>
