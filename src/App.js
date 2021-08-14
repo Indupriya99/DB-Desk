@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
@@ -11,6 +12,7 @@ import FourthFloor from './Pages/FourthFloor/FourthFloor';
 import FifthFloor from './Pages/FifthFloor/FifthFloor';
 
 import Login from './components/Login/Login';
+import AdminLogin from './Pages/Admin/Login/AdminLogin';
 
 function App() {
 
@@ -29,9 +31,25 @@ function App() {
         <div><FifthFloor/></div>
       </AwesomeSlider>
       {/* <Login/> */}
+      {/* <Router>
+        <Switch>
+          <Route path='/adminLogin' exact component={AdminLogin} />
+        </Switch>
+      </Router> */}
     </div>
   ):(
-    <Login setLogin={setLogin}/>
+    <>
+    <Router>
+    <Switch>
+      <Route exact path='/'>
+        <Login setLogin={setLogin} />
+      </Route>
+      <Route exact path='/adminLogin'>
+        <AdminLogin/>
+      </Route>
+    </Switch>
+  </Router>
+  </>
   );
 }
 
