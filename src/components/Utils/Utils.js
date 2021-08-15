@@ -14,7 +14,7 @@ import DateTimePicker from 'react-datetime-picker';
 
 import './util.css';
 
-const Utils = ({seat}) => {
+const Utils = ({seat,finalSeatID,color}) => {
 
     const [bookingDate, setBookingDate] = useState(new Date());
     const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -45,6 +45,11 @@ const Utils = ({seat}) => {
     const cancelButtonHandler = () => {
         setCancelButtonState('loading');
         setCancelOpen(true);
+        console.log(`Final seat Id ${finalSeatID}`)
+        document.getElementById(finalSeatID).style.background = color;
+        document.getElementById(finalSeatID).style.borderRadius = '0px'
+        document.getElementById(finalSeatID).style.borderTopLeftRadius = '25px'
+        document.getElementById(finalSeatID).style.borderTopRightRadius = '25px'
         setTimeout(() => {
             setCancelButtonState('success');
         }, 1000);
@@ -101,7 +106,7 @@ const Utils = ({seat}) => {
                         style={{
                             borderRadius: '5px'
                         }}
-                        outline={true}
+                        outline={false}
                         shadow={false}
                         rounded={true}
                         size={'normal'}
@@ -141,7 +146,7 @@ const Utils = ({seat}) => {
                         style={{
                             borderRadius: '5px'
                         }}
-                        outline={true}
+                        outline={false}
                         shadow={false}
                         rounded={true}
                         size={'normal'}

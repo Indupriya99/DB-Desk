@@ -3,28 +3,3 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-.first, .second, .third {
-  color: white;
-  text-align: center;
-  font-size: xx-large;
-  min-width: 500px;
-}
-
-.first{
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-}
-
-.second{
-  width: 100vw;
-  height: 100vh;
-  background-color: yellowgreen;
-}
-
-.third{
-  width: 100vw;
-  height: 100vh;
-  background-color: lightgreen;
-}

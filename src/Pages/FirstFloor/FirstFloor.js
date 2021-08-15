@@ -12,11 +12,16 @@ import AOS from 'aos';
 
 const FirstFloor = () => {
 
+    var count =0
     useEffect(()=>{
+        if(count===0){
+            alert('Checkout ur Team has booked in 4th Floor');
+            count=3;
+        }
         AOS.init({
             duration:2000
         })
-    })
+    },[])
 
     const [myseat, setSelectedSeat] = useState('');
     const [previousSeatID,setPreviousSeatID] = useState('');
@@ -50,7 +55,7 @@ const FirstFloor = () => {
         // setSelectedSeat(selectedSeatID);
         splitID(selectedSeatID);
     }
-
+    
     return (
         <div className='first'>
             <Navbar />

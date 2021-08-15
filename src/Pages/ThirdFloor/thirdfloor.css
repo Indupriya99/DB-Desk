@@ -1,5 +1,93 @@
 .third{
     width: 100vw;
     height: 85vh;
-    background-color: limegreen;
+    background: #159957;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #155799, #159957);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
+
+  
+.third-navbar{
+  width: 100vw;
+  min-height: 8vh;
+  padding: 5px;
+  font-size: xx-large;
+  text-align: center;
+  color: white;
+  background-color: rgb(4, 4, 66);
+}
+
+.third-utils{
+  margin: 10px;
+  height: 25vh;
+  /* background-color: rgba(34, 31, 31, 0.4); */
+  border-radius: 10px;
+  min-height: 22vh;
+}
+
+.third-seat-container{
+width: 100vw;
+height: 50vh;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+/* background-color:  rgba(104, 30, 30, 0.733); */
+border-radius: 50px;
+}
+
+.third-left-side{
+width: 45vw;
+height: 50vh;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+/* background-color: black; */
+margin: 10px;
+}
+
+.third-right-side{
+width: 45vw;
+height: 50vh;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+/* background-color: black; */
+}
+
+.third-seat{
+border-top-left-radius: 25px;
+border-top-right-radius: 25px;
+padding: 5px;
+width: 75px;
+height: 75px;
+margin: 10px;
+background-color: #1abba6;
+text-align: center;
+font-size: medium;
+border: 2px solid black;
+color: black;
+font-weight: bold;
+}
+
+
+
+@media screen and (max-width:800px){
+.third-seat-container{
+  flex-direction: column;
+}
+
+.third-left-side{
+  width: 95vw;
+}
+.third-right-side{
+  width: 95vw;
+}
+
+.third-seat{
+  height: 45px;
+  width: 65px;
+}
+}
