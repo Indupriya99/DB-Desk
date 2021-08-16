@@ -1,5 +1,92 @@
 .second{
     width: 100vw;
-    height: 80vh;
-    background-color: red;
-  }
+    height: 85vh;
+    background: #8360c3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #2ebf91, #8360c3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.second-navbar{
+  width: 100vw;
+  min-height: 8vh;
+  padding: 5px;
+  font-size: xx-large;
+  text-align: center;
+  color: white;
+  background-color: rgb(4, 4, 66);
+}
+
+.second-utils{
+  margin: 10px;
+  height: 25vh;
+  /* background-color: rgba(34, 31, 31, 0.4); */
+  border-radius: 10px;
+  min-height: 22vh;
+}
+
+.second-seat-container{
+width: 100vw;
+height: 50vh;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+/* background-color:  rgba(104, 30, 30, 0.733); */
+border-radius: 50px;
+}
+
+.second-left-side{
+width: 45vw;
+height: 50vh;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+/* background-color: black; */
+margin: 10px;
+}
+
+.second-right-side{
+width: 45vw;
+height: 50vh;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+/* background-color: black; */
+}
+
+.second-seat{
+border-top-left-radius: 25px;
+border-top-right-radius: 25px;
+padding: 5px;
+width: 75px;
+height: 75px;
+margin: 10px;
+background-color: #138d66;
+text-align: center;
+font-size: medium;
+border: 2px solid black;
+color: black;
+font-weight: bold;
+}
+
+
+
+@media screen and (max-width:800px){
+.second-seat-container{
+  flex-direction: column;
+}
+
+.second-left-side{
+  width: 95vw;
+}
+.second-right-side{
+  width: 95vw;
+}
+
+.second-seat{
+  height: 45px;
+  width: 65px;
+}
+}
