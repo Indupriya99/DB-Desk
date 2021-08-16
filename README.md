@@ -27,3 +27,11 @@ Seat Booking =>
 Todo Today : 
     Login Page redirection
     All 5 floors UI setup
+
+Features done 
+    - Date and Time 
+    - Seat Booking 
+    - Seat Cancelling 
+    - Admin Page 
+    - Floor Design
+    
